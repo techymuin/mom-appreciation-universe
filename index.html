@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A mobile-friendly Mother's Day universe filled with memories, photos, music, and appreciation."
+    />
+    <title>Mom Appreciation Universe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="starCanvas" aria-hidden="true"></canvas>
+    <div class="aurora aurora-one" aria-hidden="true"></div>
+    <div class="aurora aurora-two" aria-hidden="true"></div>
+
+    <main>
+      <section class="welcome-screen" id="welcomeScreen" aria-labelledby="welcomeTitle">
+        <p class="eyebrow">Mother's Day 2026</p>
+        <h1 id="welcomeTitle">Welcome to the universe where you are the center of everything</h1>
+        <p class="welcome-copy">
+          A tiny galaxy made from memories, gratitude, and all the love you have given.
+        </p>
+        <button class="primary-button" id="enterButton" type="button">
+          Enter, Maa
+        </button>
+      </section>
+
+      <section class="universe-shell" id="universe" aria-labelledby="universeTitle">
+        <header class="site-header">
+          <a class="brand" href="#universe" aria-label="Mom Appreciation Universe home">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span>Mom Appreciation Universe</span>
+          </a>
+          <button class="music-toggle" id="musicToggle" type="button" aria-pressed="false">
+            Music Off
+          </button>
+        </header>
+
+        <section class="hero-panel" aria-labelledby="universeTitle">
+          <div class="hero-copy">
+            <p class="eyebrow">For the one who made home feel infinite</p>
+            <h2 id="universeTitle">Every star here remembers something beautiful about you.</h2>
+            <p>
+              Tap the glowing stars to open sample memories. Later, we can replace every
+              message and image with your real moments.
+            </p>
+          </div>
+          <div class="counter-panel" aria-live="polite">
+            <span>Mom, you have been amazing for</span>
+            <strong id="amazingDays">0</strong>
+            <span>days of my life</span>
+          </div>
+        </section>
+
+        <section class="memory-sky" aria-labelledby="memoryTitle">
+          <div class="section-heading">
+            <p class="eyebrow">Memory Stars</p>
+            <h2 id="memoryTitle">Tap a star to open a memory</h2>
+          </div>
+          <div class="memory-field" id="memoryField" aria-label="Clickable memory stars">
+            <button class="memory-star star-a" type="button" data-memory="0">
+              <span>01</span>
+            </button>
+            <button class="memory-star star-b" type="button" data-memory="1">
+              <span>02</span>
+            </button>
+            <button class="memory-star star-c" type="button" data-memory="2">
+              <span>03</span>
+            </button>
+            <button class="memory-star star-d" type="button" data-memory="3">
+              <span>04</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="timeline-section" aria-labelledby="timelineTitle">
+          <div class="section-heading">
+            <p class="eyebrow">Why I Love You</p>
+            <h2 id="timelineTitle">A small timeline of endless reasons</h2>
+          </div>
+          <div class="love-timeline" id="loveTimeline">
+            <article>
+              <span>01</span>
+              <h3>You believed first</h3>
+              <p>Before I understood myself, you already saw good in me.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>You made sacrifice look quiet</h3>
+              <p>You gave so much without asking the world to notice.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>You made ordinary days warm</h3>
+              <p>Your care turned normal moments into memories I carry everywhere.</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>You are still my safe place</h3>
+              <p>No matter how far life moves, home still sounds like your voice.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="gallery-section" aria-labelledby="galleryTitle">
+          <div class="section-heading">
+            <p class="eyebrow">Photo Galaxy</p>
+            <h2 id="galleryTitle">Sample photos for now</h2>
+          </div>
+          <div class="photo-galaxy" id="photoGalaxy">
+            <figure class="photo-card is-featured">
+              <img src="assets/sample-memory-1.png" alt="Sample memory artwork with a glowing moon" />
+              <figcaption>Replace this with a favorite photo together.</figcaption>
+            </figure>
+            <figure class="photo-card">
+              <img src="assets/sample-memory-2.png" alt="Sample memory artwork with rose colored stars" />
+              <figcaption>A childhood memory can go here.</figcaption>
+            </figure>
+            <figure class="photo-card">
+              <img src="assets/sample-memory-3.png" alt="Sample memory artwork with golden light" />
+              <figcaption>Add a celebration or family moment.</figcaption>
+            </figure>
+            <figure class="photo-card">
+              <img src="assets/sample-memory-4.png" alt="Sample memory artwork with a small planet" />
+              <figcaption>Save this space for a photo she loves.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="letter-section" aria-labelledby="letterTitle">
+          <p class="eyebrow">A Letter</p>
+          <h2 id="letterTitle">Dear Maa,</h2>
+          <p>
+            This is only a sample letter for now. Later I will fill this universe with our
+            real stories, real photos, and the words I want you to remember forever.
+          </p>
+          <p>
+            Thank you for loving me in ways I noticed late, for carrying worries quietly,
+            and for making life softer just by being there.
+          </p>
+        </section>
+
+        <section class="final-section" aria-labelledby="finalTitle">
+          <p class="eyebrow">Final Constellation</p>
+          <h2 id="finalTitle">All these stars say the same thing.</h2>
+          <p>I love you, Maa. Happy Mother's Day.</p>
+        </section>
+      </section>
+    </main>
+
+    <div class="memory-modal" id="memoryModal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal-content">
+        <button class="modal-close" id="modalClose" type="button" aria-label="Close memory">
+          Close
+        </button>
+        <img id="modalImage" src="assets/sample-memory-1.png" alt="" />
+        <p class="eyebrow" id="modalKicker">Memory Star</p>
+        <h2 id="modalTitle">Sample Memory</h2>
+        <p id="modalText"></p>
+      </div>
+    </div>
+
+    <audio id="backgroundMusic" src="assets/soft-note.wav" loop preload="auto"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
